@@ -1,6 +1,6 @@
 MTCP_BASE?=${HOME}/mtcp
-DPDK_INC=${MTCP_BASE}/dpdk/include
-DPDK_LIB=${MTCP_BASE}/dpdk/lib/
+DPDK_INC=${MTCP_BASE}/dpdk/x86_64-native-linuxapp-gcc/include/
+DPDK_LIB=${MTCP_BASE}/dpdk/x86_64-native-linuxapp-gcc/lib/
 MTCP_INC    =-I${MTCP_BASE}/mtcp/include
 MTCP_LIB    =-L${MTCP_BASE}/mtcp/lib
 
