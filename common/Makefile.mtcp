@@ -42,6 +42,7 @@ MTCP_LDLIBS += -Wl,-lrte_pci
 MTCP_LDLIBS += -Wl,-lrte_ip_frag
 MTCP_LDLIBS += -Wl,-lrte_ethdev
 MTCP_LDLIBS += -Wl,-lrte_mempool
+MTCP_LDLIBS += -Wl,-lrte_mempool_ring
 MTCP_LDLIBS += -Wl,-lrte_ring
 MTCP_LDLIBS += -Wl,-lrte_eal
 MTCP_LDLIBS += -Wl,-lrte_cmdline
