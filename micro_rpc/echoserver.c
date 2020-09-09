@@ -418,7 +418,7 @@ static void *thread_run(void *arg)
             } else {
                 /* connection */
                 if ((evs[i].events & ~(SS_EPOLLIN | SS_EPOLLOUT))) {
-                    fprintf(stderr, "Closing connection on EP error\n");
+                    fprintf(stderr, "Closing connection on EP error: %x\n", evs[i].events);
                     conn_close(co, c);
                     continue;
                 }
