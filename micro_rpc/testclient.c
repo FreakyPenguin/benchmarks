@@ -259,15 +259,12 @@ static void prepare_core(struct core *c)
         abort();
     }
 
-    abort();
-#if 0
-    if ((ret = mtcp_init_rss(sc, INADDR_ANY, 1, addr.sin_addr.s_addr,
-                    addr.sin_port)) != 0)
+    if ((ret = mtcp_init_rss(sc, INADDR_ANY, 1, addrs[0].sin_addr.s_addr,
+                    addrs[0].sin_port)) != 0)
     {
         fprintf(stderr, "[%d] mtcp_init_rss failed\n", cn);
         abort();
     }
-#endif
 #else
     sc = NULL;
 #endif
