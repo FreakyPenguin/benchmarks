@@ -4,7 +4,7 @@ TARGETS = echoserver_linux testclient_linux echoserver_ll \
 TAS_CODE?=${HOME}/tas/code
 
 CFLAGS = -std=gnu99 -g -Wall -O3 -march=native \
-	-I$(TAS_CODE)/include -I$(TAS_CODE)/lib/tas/include
+	-I$(TAS_CODE)/include -I$(TAS_CODE)/lib/tas/include $(EXTRA_CFLAGS)
 LDFLAGS =-m64 -g -O3 -pthread  -march=native -no-pie
 LDLIBS = -lrt
 
