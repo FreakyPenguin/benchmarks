@@ -477,10 +477,12 @@ static inline int conn_send(struct core *c, struct connection *co)
 
     /* shutdown if connection tx limit reached */
     if (num_msgs > 0 && co->tx_cnt >= num_msgs && co->state == CONN_OPEN) {
+#ifndef USE_MTCP
       if (shutdown(co->fd, SHUT_WR) != 0) {
         conn_error(c, co, "shutdown failed");
         return -1;
       }
+#endif
       co->state = CONN_CLOSING;
     }
 
